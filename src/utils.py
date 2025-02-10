@@ -6,6 +6,7 @@ from sklearn.metrics import r2_score
 from src.exception import CustomException
 from sklearn.model_selection import GridSearchCV
 import dill
+import pickle
 
 # Save files to certain file path you want
 def save_object(file_path, obj):
@@ -45,5 +46,13 @@ def evaluate_models(X_train, y_train, X_test, y_test, models, param):
             
             report[list(models.keys())[i]] = test_model_score
         return report
+    except Exception as e:
+        raise CustomException(e, sys)
+    
+def load_object(file_path):
+    # loads the pickle files into our predict_pipeline.py
+    try:
+        with open(file_path, 'rb') as file_obj:
+            return pickle.load(file_obj)
     except Exception as e:
         raise CustomException(e, sys)

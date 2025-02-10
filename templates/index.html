@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home - Student Exam Performance Indicator</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #74ebd5, #acb6e5);
+        min-height: 100vh;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      /* Navbar styling */
+      .navbar {
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      /* Card styling */
+      .card {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 1s ease-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      h1,
+      h3 {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">Exam Performance</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('predict_datapoint') }}">Prediction</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+      <div class="card p-4">
+        <div class="card-body">
+          <h1 class="text-center mb-4">Welcome to the Home Page!</h1>
+          <div class="card-text">
+            <p>
+              This is an end-to-end machine learning project where we:
+            </p>
+            <ul>
+              <li>Understand the problem statement</li>
+              <li>Collect data</li>
+              <li>Perform data checks</li>
+              <li>Conduct Exploratory Data Analysis (EDA)</li>
+              <li>Pre-process the data</li>
+              <li>Train models</li>
+              <li>Choose the best model</li>
+            </ul>
+            <h3>Problem Statement</h3>
+            <p>
+              For this project, we are trying to understand how a student's performance
+              (test scores) is affected by variables such as gender, ethnicity, parental
+              level of education, lunch type, and test preparation course.
+            </p>
+            <h3>Data Collection</h3>
+            <p>
+              I will be utilizing a dataset from Kaggle: 
+              <a
+                href="https://www.kaggle.com/datasets/spscientist/students-performance-in-exams?datasetld=74977"
+                target="_blank"
+                >Students Performance in Exams</a
+              >. The dataset consists of 1000 rows and 8 columns.
+            </p>
+            <h3>GitHub Link</h3>
+            <p>Here is the access to the full code: 
+                <a
+                href="https://github.com/ManjulBalayar/mlproject/tree/main"
+                target="_blank"
+                >mlproject</a
+              >.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    ></script>
+  </body>
+</html>

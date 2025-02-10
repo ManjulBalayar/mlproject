@@ -13,9 +13,9 @@ from src.components.model_trainer import ModelTrainerConfig, ModelTrainer
 @dataclass
 class DataIngestionConfig:
     # My data ingestion will save my training data/output in this specific path
-    train_data_path: str=os.path.join('artifact', 'train.csv')
-    test_data_path: str=os.path.join('artifact', 'test.csv')
-    raw_data_path: str=os.path.join('artifact', 'data.csv')
+    train_data_path: str=os.path.join('artifacts', 'train.csv')
+    test_data_path: str=os.path.join('artifacts', 'test.csv')
+    raw_data_path: str=os.path.join('artifacts', 'data.csv')
 
 class DataIngestion:
     def __init__(self):
